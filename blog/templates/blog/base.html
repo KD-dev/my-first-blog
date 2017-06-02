@@ -8,7 +8,11 @@
 		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 	</head>
 	<body>
+		{% if user.is_authenticated %}
+	    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		{% endif %}
 		<div class="page-header">
+			<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 			<h1><a href="">Kyudong blog</a></h1>
 		</div>
 		<div class="content container">
@@ -19,12 +23,5 @@
 		        </div>
 		    </div>
 		</div>
-
-		<div>
-		    <p>published: 19.05.2017 </p>
-		    <h2><a href="">My second post</a></h2>
-		    <p>Onmaway , Angular is my cooperator</p>
-	    </div>
-
      </body>
 </html>
